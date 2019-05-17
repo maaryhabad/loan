@@ -14,11 +14,13 @@
 		CD69508E228AE88200B6FAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD69508C228AE88200B6FAD4 /* LaunchScreen.storyboard */; };
 		CD695099228AE88200B6FAD4 /* LoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD695098228AE88200B6FAD4 /* LoanTests.swift */; };
 		CD6950A4228AE88200B6FAD4 /* LoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6950A3228AE88200B6FAD4 /* LoanUITests.swift */; };
+		CD74D1D2228EF6BA00B84B6E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD74D1D1228EF6BA00B84B6E /* Info.plist */; };
 		CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */; };
 		CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABB228EDDFA00CB76E9 /* Model.swift */; };
 		CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */; };
 		CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */; };
 		CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */; };
+		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +53,13 @@
 		CD69509F228AE88200B6FAD4 /* LoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6950A3228AE88200B6FAD4 /* LoanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanUITests.swift; sourceTree = "<group>"; };
 		CD6950A5228AE88200B6FAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD78B9C7228C581200A9A1A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../Info.plist; sourceTree = "<group>"; };
+		CD74D1D1228EF6BA00B84B6E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 		CD7D2ABB228EDDFA00CB76E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewController.swift; sourceTree = "<group>"; };
 		CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
+		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +110,9 @@
 		CD695082228AE88000B6FAD4 /* Loan */ = {
 			isa = PBXGroup;
 			children = (
+				CD74D1D1228EF6BA00B84B6E /* Info.plist */,
 				CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */,
 				CD7D2ABB228EDDFA00CB76E9 /* Model.swift */,
-				CD78B9C7228C581200A9A1A5 /* Info.plist */,
 				CD695083228AE88000B6FAD4 /* AppDelegate.swift */,
 				CD695085228AE88000B6FAD4 /* ViewController.swift */,
 				CD695087228AE88000B6FAD4 /* Main.storyboard */,
@@ -118,6 +121,7 @@
 				CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */,
 				CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */,
 				CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */,
+				CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -244,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD74D1D2228EF6BA00B84B6E /* Info.plist in Resources */,
 				CD69508E228AE88200B6FAD4 /* LaunchScreen.storyboard in Resources */,
 				CD69508B228AE88200B6FAD4 /* Assets.xcassets in Resources */,
 				CD695089228AE88000B6FAD4 /* Main.storyboard in Resources */,
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */,
+				CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */,
 				CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */,
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
@@ -456,7 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ADP5XER6GT;
-				INFOPLIST_FILE = "$(SRCROOT)/../../../Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Loan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ADP5XER6GT;
-				INFOPLIST_FILE = "$(SRCROOT)/../../../Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Loan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

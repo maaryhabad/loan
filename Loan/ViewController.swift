@@ -15,11 +15,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "tablecell", for: indexPath) as! TableViewCell
+        tableCell.displayLivro(livro: Model.instance.livros[indexPath.row])
+        
+        return tableCell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Todos os livros"
     }
     
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var table: UITableView!
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Model.instance.livros.count
@@ -42,6 +51,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        table.delegate = self
+        table.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 
