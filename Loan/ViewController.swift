@@ -25,6 +25,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return "Todos os livros"
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var table: UITableView!

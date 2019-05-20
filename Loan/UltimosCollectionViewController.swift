@@ -54,6 +54,10 @@ class UltimosCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "detalhes") as? 
+    }
 
     // MARK: UICollectionViewDelegate
 

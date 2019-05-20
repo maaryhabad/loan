@@ -20,6 +20,7 @@
 		CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */; };
 		CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */; };
 		CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */; };
+		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
 		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewController.swift; sourceTree = "<group>"; };
 		CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
+		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
 		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */,
 				CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */,
 				CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */,
+				CDAA2F1A22925970009B3F3A /* LivroViewController.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */,
 				CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */,
 				CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */,
+				CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */,
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD695086228AE88000B6FAD4 /* ViewController.swift in Sources */,
