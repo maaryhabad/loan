@@ -26,7 +26,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "livro") as? LivroViewController {
+            vc.livroSelecionado = indexPath.row
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     
@@ -43,6 +46,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.displayLivro(livro: Model.instance.livros[indexPath.row])
         // Configure the cell
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "livro") as? LivroViewController {
+            vc.livroSelecionado = indexPath.row
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     

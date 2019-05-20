@@ -375,7 +375,7 @@
         <!--Livro View Controller-->
         <scene sceneID="kdc-Wj-c6D">
             <objects>
-                <viewController id="qpA-9m-VTW" customClass="LivroViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="livro" id="qpA-9m-VTW" customClass="LivroViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OIs-pV-ebM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,6 +431,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YYv-cq-9vV"/>
                     </view>
+                    <connections>
+                        <outlet property="ISBN" destination="Tka-mw-WyF" id="2dU-sx-BZa"/>
+                        <outlet property="imgView" destination="vja-nk-qmp" id="hYl-iJ-UiP"/>
+                        <outlet property="nomeDoAutor" destination="eaa-ly-5MO" id="mUa-jr-RWF"/>
+                        <outlet property="nomeDoLivro" destination="7Cm-nk-M8Y" id="thM-hy-RTE"/>
+                        <outlet property="numeroDePaginas" destination="ffG-Hm-Ta1" id="36q-xq-aT5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmq-cw-k1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

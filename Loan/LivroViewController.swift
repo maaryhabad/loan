@@ -9,7 +9,27 @@
 import UIKit
 
 class LivroViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var nomeDoLivro: UILabel!
+    @IBOutlet weak var nomeDoAutor: UILabel!
+    @IBOutlet weak var ISBN: UILabel!
+    @IBOutlet weak var numeroDePaginas: UILabel!
+    
+    var livroSelecionado = 0
+    
+    func refreshInterface() {
+        let escolhido = Model.instance.livros[livroSelecionado]
+        
+        imgView.image = escolhido.capaDoLivro
+        nomeDoLivro.text = escolhido.nome
+        nomeDoAutor.text = "Nome do autor: \(escolhido.autor)"
+        ISBN.text = "ISBN: \(escolhido.ISBN)"
+        numeroDePaginas.text = "Número de páginas: \(escolhido.numeroDePag)"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
