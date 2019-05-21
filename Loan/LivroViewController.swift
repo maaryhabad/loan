@@ -17,22 +17,21 @@ class LivroViewController: UIViewController {
     @IBOutlet weak var ISBN: UILabel!
     @IBOutlet weak var numeroDePaginas: UILabel!
     
-    var livroSelecionado = 0
+    var livroSelecionado: Livro!
     
     func refreshInterface() {
-        let escolhido = Model.instance.livros[livroSelecionado]
         
-        imgView.image = escolhido.capaDoLivro
-        nomeDoLivro.text = escolhido.nome
-        nomeDoAutor.text = "Nome do autor: \(escolhido.autor)"
-        ISBN.text = "ISBN: \(escolhido.ISBN)"
-        numeroDePaginas.text = "Número de páginas: \(escolhido.numeroDePag)"
+        imgView.image = livroSelecionado.capaDoLivro
+        nomeDoLivro.text = livroSelecionado.nome
+        nomeDoAutor.text = "Nome do autor: \(livroSelecionado.autor)"
+        ISBN.text = "ISBN: \(livroSelecionado.ISBN)"
+        numeroDePaginas.text = "Número de páginas: \(livroSelecionado.numeroDePag)"
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refreshInterface()
         // Do any additional setup after loading the view.
     }
     

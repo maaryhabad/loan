@@ -17,11 +17,17 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var nomeDoAutor: UITextField!
     @IBOutlet weak var ISBN: UITextField!
     @IBOutlet weak var numeroDePaginas: UITextField!
+    @IBOutlet weak var emprestadoSwitch: UISwitch!
+    @IBOutlet weak var viewEmprestado: UIView!
+    @IBOutlet weak var paraQuem: UITextField!
     
+    
+    var emprestado = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewEmprestado.isHidden = true
+        emprestadoSwitch.isOn = false
         // Do any additional setup after loading the view.
     }
     
@@ -49,19 +55,29 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     
     @IBAction func btnSalvar(_ sender: Any) {
-        var model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: imageView.image!, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "")
+        var model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: imageView.image!, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: emprestado, paraQuem: paraQuem.text!)
         
         Model.instance.livros.append(model)
         print(model)
         print(Model.instance.livros)
         
-        let vc = (self.storyboard?.instantiateViewController(withIdentifier: "dashboard"))!
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
         //criar um novo livro,
         //inserir as informações
         
     }
+    
+    @IBAction func switchWasClicked(_ sender: Any) {
+        if emprestadoSwitch.isOn {
+            viewEmprestado.isHidden = false
+            emprestado = true
+        } else {
+            viewEmprestado.isHidden = true
+            emprestado = false
+        }
+    }
+    
     
     
 }
