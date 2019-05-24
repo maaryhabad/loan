@@ -46,7 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celula", for: indexPath) as! CelulaCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celula", for: indexPath) as! UltimosCollectionViewCell
         cell.displayLivro(livro: tresItens[indexPath.row])
         // Configure the cell
         return cell

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2603A52298709400D07513 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2603A42298709400D07513 /* dashboardViewController.swift */; };
+		CD2603A72298759D00D07513 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2603A62298759D00D07513 /* UIView+Extensions.swift */; };
+		CD2603A922987C3700D07513 /* UltimosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2603A822987C3700D07513 /* UltimosCollectionViewCell.swift */; };
 		CD695084228AE88000B6FAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD695083228AE88000B6FAD4 /* AppDelegate.swift */; };
 		CD695086228AE88000B6FAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD695085228AE88000B6FAD4 /* ViewController.swift */; };
 		CD695089228AE88000B6FAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD695087228AE88000B6FAD4 /* Main.storyboard */; };
@@ -18,7 +21,6 @@
 		CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */; };
 		CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABB228EDDFA00CB76E9 /* Model.swift */; };
 		CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */; };
-		CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */; };
 		CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */; };
 		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
 		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD2603A42298709400D07513 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
+		CD2603A62298759D00D07513 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CD2603A822987C3700D07513 /* UltimosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD695080228AE88000B6FAD4 /* Loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD695083228AE88000B6FAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD695085228AE88000B6FAD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +63,6 @@
 		CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 		CD7D2ABB228EDDFA00CB76E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewController.swift; sourceTree = "<group>"; };
-		CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
 		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
 		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -122,9 +126,11 @@
 				CD69508C228AE88200B6FAD4 /* LaunchScreen.storyboard */,
 				CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */,
 				CD7D2ABE228EEB1900CB76E9 /* UltimosCollectionViewController.swift */,
-				CD7D2AC0228EEB5500CB76E9 /* CelulaCollectionViewCell.swift */,
 				CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */,
 				CDAA2F1A22925970009B3F3A /* LivroViewController.swift */,
+				CD2603A42298709400D07513 /* dashboardViewController.swift */,
+				CD2603A62298759D00D07513 /* UIView+Extensions.swift */,
+				CD2603A822987C3700D07513 /* UltimosCollectionViewCell.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -281,13 +287,15 @@
 			files = (
 				CD7D2ABF228EEB1900CB76E9 /* UltimosCollectionViewController.swift in Sources */,
 				CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */,
-				CD7D2AC1228EEB5500CB76E9 /* CelulaCollectionViewCell.swift in Sources */,
 				CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */,
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD695086228AE88000B6FAD4 /* ViewController.swift in Sources */,
 				CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */,
 				CD695084228AE88000B6FAD4 /* AppDelegate.swift in Sources */,
+				CD2603A52298709400D07513 /* dashboardViewController.swift in Sources */,
+				CD2603A922987C3700D07513 /* UltimosCollectionViewCell.swift in Sources */,
+				CD2603A72298759D00D07513 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

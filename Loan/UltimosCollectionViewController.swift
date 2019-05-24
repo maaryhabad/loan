@@ -48,7 +48,7 @@ class UltimosCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celula", for: indexPath) as! CelulaCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celula", for: indexPath) as! UltimosCollectionViewCell
         cell.displayLivro(livro: Model.instance.livros[indexPath.row])
         // Configure the cell
     
