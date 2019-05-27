@@ -13,6 +13,9 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var ultimosView: UIView!
     @IBOutlet weak var todosView: UIView!
+    @IBOutlet weak var btnAdicionar: UIButton!
+    
+    //ADICIONAR BOTÃO MAIS
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,9 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         atualizaTresLivros()
         self.collection.reloadData()
         self.table.reloadData()
+        btnAdicionar.layer.cornerRadius = 10
+        
+
     }
     /*
     // MARK: - Navigation
@@ -56,10 +62,9 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         return tableCell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Todos os livros"
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tá entrando na table")
         if let vc = storyboard?.instantiateViewController(withIdentifier: "livro") as? LivroViewController {

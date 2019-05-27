@@ -17,18 +17,21 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var nomeDoAutor: UITextField!
     @IBOutlet weak var ISBN: UITextField!
     @IBOutlet weak var numeroDePaginas: UITextField!
-    @IBOutlet weak var emprestadoSwitch: UISwitch!
-    @IBOutlet weak var viewEmprestado: UIView!
-    @IBOutlet weak var paraQuem: UITextField!
+    @IBOutlet weak var photoView: UIView!
+    @IBOutlet weak var btnFoto: UIButton!
+    
     
     
     var emprestado = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewEmprestado.isHidden = true
-        emprestadoSwitch.isOn = false
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        photoView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
+        photoView.layer.cornerRadius = 10
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -41,7 +44,9 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-        imageView.image = info[.originalImage] as? UIImage
+        btnFoto.setBackgroundImage(info[.originalImage] as? UIImage, for: .normal)
+        btnFoto.setTitle("", for: .normal)
+        btnFoto.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 2, blur: 10, spread: 0)
         
     }
     
@@ -55,7 +60,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     
     @IBAction func btnSalvar(_ sender: Any) {
-        var model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: imageView.image!, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: emprestado, paraQuem: paraQuem.text!)
+        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: imageView.image!, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "")
         
         Model.instance.livros.append(model)
         print(model)
@@ -68,15 +73,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         
     }
     
-    @IBAction func switchWasClicked(_ sender: Any) {
-        if emprestadoSwitch.isOn {
-            viewEmprestado.isHidden = false
-            emprestado = true
-        } else {
-            viewEmprestado.isHidden = true
-            emprestado = false
-        }
-    }
+
     
     
     

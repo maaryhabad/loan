@@ -11,6 +11,7 @@ import UIKit
 class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblNome: UILabel!
+    @IBOutlet weak var viewCell: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,8 @@ class TableViewCell: UITableViewCell {
     
     func displayLivro(livro: Livro) {
         lblNome.text = livro.nome
+        viewCell.layer.cornerRadius = 10
     }
+    
 
 }
