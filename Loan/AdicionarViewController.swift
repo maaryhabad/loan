@@ -10,7 +10,7 @@ import UIKit
 
 class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    @IBOutlet weak var imageView: UIImageView!
+    var imageView: UIImageView!
     
     var imagePicker: UIImagePickerController!
     @IBOutlet weak var nomeDoLivro: UITextField!
@@ -19,7 +19,9 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var numeroDePaginas: UITextField!
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var btnFoto: UIButton!
-    
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var gradiente: UIImageView!
+    @IBOutlet weak var btnSave: UIButton!
     
     
     var emprestado = false
@@ -31,7 +33,11 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         photoView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
+        infoView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
         photoView.layer.cornerRadius = 10
+        gradiente.layer.cornerRadius = 10
+        infoView.layer.cornerRadius = 10
+        btnSave.layer.cornerRadius = 10
     }
     
     @IBAction func takePhoto(_ sender: Any) {
@@ -47,7 +53,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         btnFoto.setBackgroundImage(info[.originalImage] as? UIImage, for: .normal)
         btnFoto.setTitle("", for: .normal)
         btnFoto.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 2, blur: 10, spread: 0)
-        
+        imageView.image = btnFoto.backgroundImage(for: .normal)
     }
     
     @IBAction func tocouNaView(_ sender: Any) {
@@ -55,6 +61,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         nomeDoAutor.resignFirstResponder()
         ISBN.resignFirstResponder()
         numeroDePaginas.resignFirstResponder()
+        
     }
     //botao de salvar (pegar o livro = newlivro (com as informações dentro).
     

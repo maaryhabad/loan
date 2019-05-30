@@ -46,78 +46,140 @@
                                     <constraint firstItem="ZFU-eT-ZBm" firstAttribute="centerX" secondItem="jD3-P9-Jye" secondAttribute="centerX" id="e9G-15-fbp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-je-nTW">
-                                <rect key="frame" x="185.5" y="744" width="43" height="30"/>
-                                <state key="normal" title="Salvar"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-je-nTW">
+                                <rect key="frame" x="103.5" y="733.5" width="207" height="40.5"/>
+                                <color key="backgroundColor" red="0.3921568627" green="0.64705882349999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="btnSalvar:" destination="Efl-M7-YpC" eventType="touchUpInside" id="R47-02-wtx"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
-                                <rect key="frame" x="134" y="456" width="162" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
-                                <rect key="frame" x="55" y="461" width="51" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
-                                <rect key="frame" x="61" y="512" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
-                                <rect key="frame" x="134" y="507" width="225.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ISBN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
-                                <rect key="frame" x="61" y="563" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
-                                <rect key="frame" x="134" y="558" width="180" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Páginas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
-                                <rect key="frame" x="61" y="614" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
-                                <rect key="frame" x="134" y="609" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYG-tr-omd">
+                                <rect key="frame" x="0.0" y="414" width="414" height="299"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
+                                        <rect key="frame" x="164.5" y="106" width="225.5" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Título do livro:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
+                                        <rect key="frame" x="34" y="35" width="100" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6eE-D8-5Fb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
+                                        <rect key="frame" x="87" y="110.5" width="47" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
+                                        <rect key="frame" x="91" y="180.5" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
+                                        <rect key="frame" x="164.5" y="176" width="225.5" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
+                                        <rect key="frame" x="164.5" y="246" width="225.5" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
+                                        <rect key="frame" x="164.5" y="40" width="225.5" height="31"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.91764705882352937" green="0.31764705882352939" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número  de páginas:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
+                                        <rect key="frame" x="34" y="240.5" width="100" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="centerY" secondItem="92E-e4-BZO" secondAttribute="centerY" id="3Fn-9W-EP5"/>
+                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="top" secondItem="blF-RH-LG4" secondAttribute="bottom" constant="40" id="42E-Gt-RNz"/>
+                                    <constraint firstItem="92E-e4-BZO" firstAttribute="top" secondItem="DFe-Fq-mE6" secondAttribute="bottom" constant="40" id="5Hz-Eo-xfT"/>
+                                    <constraint firstItem="PYA-Wx-B3Y" firstAttribute="top" secondItem="jYG-tr-omd" secondAttribute="top" constant="40" id="7mm-FE-n7b"/>
+                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="trailing" secondItem="1FZ-Hv-TyS" secondAttribute="trailing" id="AMf-Ni-pFF"/>
+                                    <constraint firstItem="92E-e4-BZO" firstAttribute="width" secondItem="DFe-Fq-mE6" secondAttribute="width" id="Efm-pn-7Br"/>
+                                    <constraint firstItem="blF-RH-LG4" firstAttribute="top" secondItem="PYA-Wx-B3Y" secondAttribute="bottom" constant="35" id="FmS-Zm-MIM"/>
+                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="trailing" secondItem="blF-RH-LG4" secondAttribute="trailing" id="FxT-NC-i5S"/>
+                                    <constraint firstItem="92E-e4-BZO" firstAttribute="trailing" secondItem="DFe-Fq-mE6" secondAttribute="trailing" id="GKx-yX-DMt"/>
+                                    <constraint firstItem="PYA-Wx-B3Y" firstAttribute="leading" secondItem="ByK-zQ-hmM" secondAttribute="trailing" constant="30.5" id="K6L-W5-ZaM"/>
+                                    <constraint firstItem="dzh-bU-eTH" firstAttribute="centerY" secondItem="blF-RH-LG4" secondAttribute="centerY" id="Oag-u5-WO6"/>
+                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="width" secondItem="blF-RH-LG4" secondAttribute="width" id="PML-Wa-gbR"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYA-Wx-B3Y" secondAttribute="trailing" constant="24" id="Qwg-js-DfW"/>
+                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="width" secondItem="ByK-zQ-hmM" secondAttribute="width" id="TPy-Lp-B0g"/>
+                                    <constraint firstItem="1FZ-Hv-TyS" firstAttribute="centerY" secondItem="DFe-Fq-mE6" secondAttribute="centerY" id="XIQ-Nr-adq"/>
+                                    <constraint firstItem="ByK-zQ-hmM" firstAttribute="top" secondItem="jYG-tr-omd" secondAttribute="top" constant="35" id="dhM-ep-cb4"/>
+                                    <constraint firstItem="1FZ-Hv-TyS" firstAttribute="trailing" secondItem="dzh-bU-eTH" secondAttribute="trailing" id="dkD-WR-XJW"/>
+                                    <constraint firstItem="ByK-zQ-hmM" firstAttribute="centerY" secondItem="PYA-Wx-B3Y" secondAttribute="centerY" id="gTG-7i-7RF"/>
+                                    <constraint firstItem="blF-RH-LG4" firstAttribute="trailing" secondItem="PYA-Wx-B3Y" secondAttribute="trailing" id="gWz-7b-AO9"/>
+                                    <constraint firstItem="dzh-bU-eTH" firstAttribute="trailing" secondItem="ByK-zQ-hmM" secondAttribute="trailing" id="j5E-b6-oso"/>
+                                    <constraint firstItem="blF-RH-LG4" firstAttribute="width" secondItem="PYA-Wx-B3Y" secondAttribute="width" id="srl-w1-es1"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="top" secondItem="4Hg-PE-CIy" secondAttribute="top" id="00p-uM-GZT"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="leading" secondItem="Bq3-96-dwm" secondAttribute="leading" id="7iH-to-mP0"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="9xz-jB-Bxm"/>
+                            <constraint firstItem="jYG-tr-omd" firstAttribute="top" secondItem="jD3-P9-Jye" secondAttribute="bottom" constant="10" id="A7I-Pw-aeG"/>
+                            <constraint firstItem="jYG-tr-omd" firstAttribute="width" secondItem="Bq3-96-dwm" secondAttribute="width" id="BmC-HZ-cRv"/>
                             <constraint firstItem="yCP-je-nTW" firstAttribute="bottom" secondItem="4Hg-PE-CIy" secondAttribute="bottom" id="O8E-eW-bhX"/>
+                            <constraint firstItem="jYG-tr-omd" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.37" id="Vm6-cO-9TT"/>
+                            <constraint firstItem="yCP-je-nTW" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="d7c-5C-uRx"/>
+                            <constraint firstItem="yCP-je-nTW" firstAttribute="width" secondItem="Bq3-96-dwm" secondAttribute="width" multiplier="0.5" id="gla-uv-amL"/>
+                            <constraint firstItem="yCP-je-nTW" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.05" id="kMM-gr-8sO"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.5" id="tiH-rF-uY4"/>
+                            <constraint firstItem="jYG-tr-omd" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="zF6-EK-m5e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Hg-PE-CIy"/>
                         <connections>
@@ -127,6 +189,9 @@
                     <connections>
                         <outlet property="ISBN" destination="DFe-Fq-mE6" id="veH-wd-Pwj"/>
                         <outlet property="btnFoto" destination="ZFU-eT-ZBm" id="6XI-dX-k0Q"/>
+                        <outlet property="btnSave" destination="yCP-je-nTW" id="44S-fv-RQl"/>
+                        <outlet property="gradiente" destination="jD3-P9-Jye" id="u09-TL-HcM"/>
+                        <outlet property="infoView" destination="jYG-tr-omd" id="wol-C7-qZR"/>
                         <outlet property="nomeDoAutor" destination="PYA-Wx-B3Y" id="4Yp-G5-TEo"/>
                         <outlet property="nomeDoLivro" destination="blF-RH-LG4" id="R4C-BR-b7i"/>
                         <outlet property="numeroDePaginas" destination="92E-e4-BZO" id="B2w-AP-Zkr"/>
