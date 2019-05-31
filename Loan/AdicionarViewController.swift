@@ -10,7 +10,7 @@ import UIKit
 
 class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    var imageView: UIImageView!
+    var image: UIImage!
     
     var imagePicker: UIImagePickerController!
     @IBOutlet weak var nomeDoLivro: UITextField!
@@ -53,7 +53,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         btnFoto.setBackgroundImage(info[.originalImage] as? UIImage, for: .normal)
         btnFoto.setTitle("", for: .normal)
         btnFoto.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 2, blur: 10, spread: 0)
-        imageView.image = btnFoto.backgroundImage(for: .normal)
+        image = info[.originalImage] as? UIImage
     }
     
     @IBAction func tocouNaView(_ sender: Any) {
@@ -67,7 +67,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     
     @IBAction func btnSalvar(_ sender: Any) {
-        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: imageView.image!, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "")
+        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: image, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "")
         
         Model.instance.livros.append(model)
         print(model)
