@@ -67,7 +67,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     
     
     @IBAction func btnSalvar(_ sender: Any) {
-        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: image, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "")
+        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: image, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "", data: "")
         
         Model.instance.livros.append(model)
         print(model)

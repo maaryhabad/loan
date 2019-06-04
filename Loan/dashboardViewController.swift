@@ -104,7 +104,7 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         var copiaDeArrayDeLivros = Model.instance.livros
         tresItens.removeAll()
         
-        for _ in 0 ... 2 {
+        for _ in 0 ... 4 {
             if let ultimoLivro = copiaDeArrayDeLivros.popLast() {
                 tresItens.append(ultimoLivro)
             }
