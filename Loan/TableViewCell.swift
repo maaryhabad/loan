@@ -10,8 +10,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lblNome: UILabel!
     @IBOutlet weak var viewCell: UIView!
+    @IBOutlet weak var lblNome: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +25,8 @@ class TableViewCell: UITableViewCell {
     }
     
     
-    func displayLivro(livro: Livro) {
-        lblNome.text = livro.nome
+    func displayLivro(arrayNomes: String) {
+        lblNome.text = arrayNomes
         viewCell.layer.cornerRadius = 10
     }
     

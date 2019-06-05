@@ -8,11 +8,10 @@
 
 import UIKit
 
-class dashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class dashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     @IBOutlet weak var ultimosView: UIView!
-    @IBOutlet weak var todosView: UIView!
     @IBOutlet weak var btnAdicionar: UIButton!
     
     //ADICIONAR BOTÃO MAIS
@@ -21,18 +20,14 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
-        table.delegate = self
-        table.dataSource = self
         atualizaTresLivros()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         ultimosView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
-        todosView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
         atualizaTresLivros()
         self.collection.reloadData()
-        self.table.reloadData()
         btnAdicionar.layer.cornerRadius = 10
         
 
@@ -51,31 +46,8 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     //TABLEVIEW
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.instance.livros.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "tablecell", for: indexPath) as! TableViewCell
-        tableCell.displayLivro(livro: Model.instance.livros[indexPath.row])
-        
-        return tableCell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tá entrando na table")
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "livro") as? LivroViewController {
-            vc.livroSelecionado = Model.instance.livros[indexPath.row]
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
     
     @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var table: UITableView!
     
     //COLLECTIONVIEW
     
