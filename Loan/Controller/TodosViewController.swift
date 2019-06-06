@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     struct Section {
@@ -17,6 +18,8 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let arrayLivros = Model.instance.livros
     var arrayNomes = [String]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,6 +55,13 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sections.map{$0.letter}
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor.black
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
