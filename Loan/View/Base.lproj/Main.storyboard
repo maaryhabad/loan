@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Adicionar View Controller-->
+        <!--Adicionar-->
         <scene sceneID="Q1i-St-8T2">
             <objects>
-                <viewController id="Efl-M7-YpC" customClass="AdicionarViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Adicionar" id="Efl-M7-YpC" customClass="AdicionarViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bq3-96-dwm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,109 +57,114 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYG-tr-omd">
                                 <rect key="frame" x="0.0" y="414" width="414" height="299"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
-                                        <rect key="frame" x="157.5" y="109" width="232.5" height="34"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Título do livro:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
-                                        <rect key="frame" x="27" y="35" width="100" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="6eE-D8-5Fb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
-                                        <rect key="frame" x="80" y="115.5" width="47" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
-                                        <rect key="frame" x="84" y="189.5" width="43" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
-                                        <rect key="frame" x="157.5" y="183" width="232.5" height="34"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
-                                        <rect key="frame" x="157.5" y="257" width="232.5" height="34"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
-                                        <rect key="frame" x="157.5" y="40" width="232.5" height="34"/>
-                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.91764705882352937" green="0.31764705882352939" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número  de páginas:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
-                                        <rect key="frame" x="27" y="253.5" width="100" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-fQ-ZFK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDI-Pf-Mdp">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Título do livro:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="59.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="59.5"/>
+                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-37-Oxg">
+                                                <rect key="frame" x="0.0" y="79.5" width="414" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="60"/>
+                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.91764705882352937" green="0.31764705882352939" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0wX-LM-Cuo">
+                                                <rect key="frame" x="0.0" y="159.5" width="414" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="59.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="59.5"/>
+                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-Oh-pCB">
+                                                <rect key="frame" x="0.0" y="239" width="414" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número  de páginas:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="60"/>
+                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="centerY" secondItem="92E-e4-BZO" secondAttribute="centerY" id="3Fn-9W-EP5"/>
-                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="top" secondItem="blF-RH-LG4" secondAttribute="bottom" constant="40" id="42E-Gt-RNz"/>
-                                    <constraint firstItem="92E-e4-BZO" firstAttribute="top" secondItem="DFe-Fq-mE6" secondAttribute="bottom" constant="40" id="5Hz-Eo-xfT"/>
-                                    <constraint firstItem="PYA-Wx-B3Y" firstAttribute="top" secondItem="jYG-tr-omd" secondAttribute="top" constant="40" id="7mm-FE-n7b"/>
-                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="trailing" secondItem="1FZ-Hv-TyS" secondAttribute="trailing" id="AMf-Ni-pFF"/>
-                                    <constraint firstItem="92E-e4-BZO" firstAttribute="width" secondItem="DFe-Fq-mE6" secondAttribute="width" id="Efm-pn-7Br"/>
-                                    <constraint firstItem="blF-RH-LG4" firstAttribute="top" secondItem="PYA-Wx-B3Y" secondAttribute="bottom" constant="35" id="FmS-Zm-MIM"/>
-                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="trailing" secondItem="blF-RH-LG4" secondAttribute="trailing" id="FxT-NC-i5S"/>
-                                    <constraint firstItem="92E-e4-BZO" firstAttribute="trailing" secondItem="DFe-Fq-mE6" secondAttribute="trailing" id="GKx-yX-DMt"/>
-                                    <constraint firstItem="PYA-Wx-B3Y" firstAttribute="leading" secondItem="ByK-zQ-hmM" secondAttribute="trailing" constant="30.5" id="K6L-W5-ZaM"/>
-                                    <constraint firstItem="dzh-bU-eTH" firstAttribute="centerY" secondItem="blF-RH-LG4" secondAttribute="centerY" id="Oag-u5-WO6"/>
-                                    <constraint firstItem="DFe-Fq-mE6" firstAttribute="width" secondItem="blF-RH-LG4" secondAttribute="width" id="PML-Wa-gbR"/>
-                                    <constraint firstAttribute="trailing" secondItem="PYA-Wx-B3Y" secondAttribute="trailing" constant="24" id="Qwg-js-DfW"/>
-                                    <constraint firstItem="vOg-kH-MrY" firstAttribute="width" secondItem="ByK-zQ-hmM" secondAttribute="width" id="TPy-Lp-B0g"/>
-                                    <constraint firstItem="1FZ-Hv-TyS" firstAttribute="centerY" secondItem="DFe-Fq-mE6" secondAttribute="centerY" id="XIQ-Nr-adq"/>
-                                    <constraint firstItem="ByK-zQ-hmM" firstAttribute="top" secondItem="jYG-tr-omd" secondAttribute="top" constant="35" id="dhM-ep-cb4"/>
-                                    <constraint firstItem="1FZ-Hv-TyS" firstAttribute="trailing" secondItem="dzh-bU-eTH" secondAttribute="trailing" id="dkD-WR-XJW"/>
-                                    <constraint firstItem="ByK-zQ-hmM" firstAttribute="centerY" secondItem="PYA-Wx-B3Y" secondAttribute="centerY" id="gTG-7i-7RF"/>
-                                    <constraint firstItem="blF-RH-LG4" firstAttribute="trailing" secondItem="PYA-Wx-B3Y" secondAttribute="trailing" id="gWz-7b-AO9"/>
-                                    <constraint firstItem="dzh-bU-eTH" firstAttribute="trailing" secondItem="ByK-zQ-hmM" secondAttribute="trailing" id="j5E-b6-oso"/>
-                                    <constraint firstItem="blF-RH-LG4" firstAttribute="width" secondItem="PYA-Wx-B3Y" secondAttribute="width" id="srl-w1-es1"/>
+                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="width" secondItem="jYG-tr-omd" secondAttribute="width" id="Fu5-sl-6oN"/>
+                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="height" secondItem="jYG-tr-omd" secondAttribute="height" id="Wzr-GW-fnG"/>
+                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="centerY" secondItem="jYG-tr-omd" secondAttribute="centerY" id="mGS-hU-lAa"/>
+                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="centerX" secondItem="jYG-tr-omd" secondAttribute="centerX" id="qXQ-h7-JGb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -203,9 +208,9 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1900.0000000000002" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="1900" y="-34"/>
         </scene>
-        <!--Todos View Controller-->
+        <!--Todos os livros-->
         <scene sceneID="1nC-7p-w1H">
             <objects>
                 <viewController id="7hT-DI-ygF" customClass="TodosViewController" customModule="Loan" customModuleProvider="target" sceneMemberID="viewController">
@@ -215,16 +220,16 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ZG-Zd-yC7">
                                 <rect key="frame" x="0.0" y="22" width="414" height="730"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.3921568627" green="0.64705882349999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexColor" red="0.3921568627" green="0.64705882349999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="Pzn-ST-eOf">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="0.3921568627" green="0.64705882349999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
                                         <outlet property="delegate" destination="7hT-DI-ygF" id="S7j-JC-xfK"/>
@@ -264,8 +269,9 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="b82-Zp-iSY" firstAttribute="width" secondItem="vZ0-mD-KWd" secondAttribute="width" multiplier="0.9" id="8tb-M9-h1p"/>
                                             <constraint firstItem="b82-Zp-iSY" firstAttribute="height" secondItem="vZ0-mD-KWd" secondAttribute="height" multiplier="0.9" id="AFQ-Rq-Awj"/>
@@ -289,6 +295,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gHe-w9-TqQ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Todos os livros" id="Ib7-fZ-1Li"/>
                     <connections>
                         <outlet property="tableView" destination="7ZG-Zd-yC7" id="xYW-NM-kK9"/>
                     </connections>
@@ -303,7 +310,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1900" y="724"/>
+            <point key="canvasLocation" x="1900" y="773"/>
         </scene>
         <!--Colecao View Controller-->
         <scene sceneID="GmA-g6-Jgr">
@@ -314,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vPc-a5-5OR">
-                                <rect key="frame" x="0.0" y="17" width="414" height="740"/>
+                                <rect key="frame" x="20.5" y="17" width="373" height="740"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sJv-ln-tD2">
                                     <size key="itemSize" width="144" height="198"/>
@@ -323,7 +330,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="categoria" id="6gz-at-UaW" customClass="CategoriasCollectionViewCell" customModule="Loan" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="categoria" reuseIdentifier="categoria" id="6gz-at-UaW" customClass="ColecoesCollectionViewCell" customModule="Loan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="144" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -345,10 +352,13 @@
                                             <constraint firstItem="U43-14-fIp" firstAttribute="centerX" secondItem="6gz-at-UaW" secondAttribute="centerX" id="edt-ig-L9U"/>
                                             <constraint firstItem="U43-14-fIp" firstAttribute="height" secondItem="6gz-at-UaW" secondAttribute="height" id="tOk-16-OiF"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="lblNome" destination="U43-14-fIp" id="LeW-ol-Wt6"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H8S-9D-tDX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GZ-9w-jpR">
@@ -368,7 +378,7 @@
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vPc-a5-5OR" firstAttribute="centerX" secondItem="i4d-6k-fWb" secondAttribute="centerX" id="AqT-nl-WbR"/>
-                            <constraint firstItem="vPc-a5-5OR" firstAttribute="width" secondItem="oGp-zJ-kcb" secondAttribute="width" id="Pg1-Lz-thT"/>
+                            <constraint firstItem="vPc-a5-5OR" firstAttribute="width" secondItem="oGp-zJ-kcb" secondAttribute="width" multiplier="0.9" id="Pg1-Lz-thT"/>
                             <constraint firstItem="vPc-a5-5OR" firstAttribute="top" secondItem="i4d-6k-fWb" secondAttribute="top" constant="17" id="UyN-1H-izg"/>
                             <constraint firstItem="vPc-a5-5OR" firstAttribute="centerY" secondItem="i4d-6k-fWb" secondAttribute="centerY" id="mVC-gN-3Yc"/>
                         </constraints>
@@ -380,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ug-h3-gwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="1442"/>
+            <point key="canvasLocation" x="1900" y="1585"/>
         </scene>
         <!--Sua coleção-->
         <scene sceneID="g5b-cS-T7G">

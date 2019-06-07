@@ -9,14 +9,16 @@
 import UIKit
 
 class ColecoesCollectionViewCell: UICollectionViewCell {
+    
+    
+    @IBOutlet weak var lblNome: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lblNome.layer.borderColor = UIColor(red: 100, green: 165, blue: 175, alpha: 1).cgColor
+        lblNome.layer.borderWidth = 2
+        lblNome.layer.cornerRadius = 10
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
 }

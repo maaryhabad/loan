@@ -12,22 +12,28 @@ class ColecaoViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var collection: UICollectionView!
     
+    var categorias = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        
+        let todasAsCategorias = Model.instance.livros.map{$0.categoria}
+        categorias = Array(Set(todasAsCategorias)).sorted()
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
+
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categorias.count
+    }
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoria", for: indexPath) as! ColecoesCollectionViewCell
-        // Configure the cell
+        cell.lblNome.text = categorias[indexPath.row]
         return cell
-        
     }
 
     /*

@@ -57,11 +57,21 @@ class TodosViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return sections.map{$0.letter}
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = UIColor.black
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = UIColor.white
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        view.tintColor = UIColor(red: 51, green: 51, blue: 60, alpha: 1)
+////        view.textLabel?.textColor = UIColor(red: 100, green: 165, blue: 175, alpha: 1)
+//        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+//    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30)) //set these values as necessary
+        returnedView.backgroundColor = .black
         
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.frame.size.width, height: 30))
+        label.text = self.sections[section].letter
+        returnedView.addSubview(label)
+        
+        return returnedView
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
