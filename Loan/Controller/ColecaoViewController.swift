@@ -11,7 +11,6 @@ import UIKit
 class ColecaoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var lblCollection: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +20,14 @@ class ColecaoViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoria", for: indexPath) as! ColecoesCollectionViewCell
+        // Configure the cell
+        return cell
+        
     }
 
     /*

@@ -323,7 +323,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6gz-at-UaW" customClass="CategoriasCollectionViewCell" customModule="Loan" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="categoria" id="6gz-at-UaW" customClass="CategoriasCollectionViewCell" customModule="Loan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="144" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -376,7 +376,6 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="vPc-a5-5OR" id="zel-Rl-hlV"/>
-                        <outlet property="lblCollection" destination="U43-14-fIp" id="paK-Ju-WB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ug-h3-gwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,7 +403,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="celula" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bYB-Qa-dPP" customClass="UltimosCollectionView" customModule="Loan" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bYB-Qa-dPP" customClass="UltimosCollectionView" customModule="Loan" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="52" width="414" height="251"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CIB-li-bo7">
@@ -414,7 +413,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celula" id="ueu-Ea-ZhF" customClass="UltimosCollectionViewCell" customModule="Loan" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="celula" reuseIdentifier="celula" id="ueu-Ea-ZhF" customClass="UltimosCollectionViewCell" customModule="Loan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.5" width="142" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

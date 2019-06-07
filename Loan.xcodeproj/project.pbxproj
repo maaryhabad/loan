@@ -19,7 +19,8 @@
 		CD74D1D2228EF6BA00B84B6E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD74D1D1228EF6BA00B84B6E /* Info.plist */; };
 		CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */; };
 		CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABB228EDDFA00CB76E9 /* Model.swift */; };
-		CD9FF01F22A9576F003BBF00 /* UltimosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF01E22A9576F003BBF00 /* UltimosCollectionViewCell.swift */; };
+		CD9F0BF222A9E446003A2C2D /* UltimosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */; };
+		CD9F0BF422A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F0BF322A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift */; };
 		CD9FF02122A9589E003BBF00 /* ColecaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF02022A9589E003BBF00 /* ColecaoViewController.swift */; };
 		CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */; };
 		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
@@ -61,7 +62,8 @@
 		CD74D1D1228EF6BA00B84B6E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 		CD7D2ABB228EDDFA00CB76E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		CD9FF01E22A9576F003BBF00 /* UltimosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UltimosCollectionViewCell.swift; path = Loan/UltimosCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD9F0BF322A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColecoesCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD9FF02022A9589E003BBF00 /* ColecaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColecaoViewController.swift; sourceTree = "<group>"; };
 		CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
 		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
@@ -155,10 +157,11 @@
 		CD86C00322A94BAC00B65AC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD9F0BF322A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift */,
+				CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */,
 				CD695087228AE88000B6FAD4 /* Main.storyboard */,
 				CD69508C228AE88200B6FAD4 /* LaunchScreen.storyboard */,
 				CD69508A228AE88200B6FAD4 /* Assets.xcassets */,
-				CD9FF01E22A9576F003BBF00 /* UltimosCollectionViewCell.swift */,
 				CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */,
 			);
 			path = View;
@@ -324,9 +327,10 @@
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */,
 				CD695084228AE88000B6FAD4 /* AppDelegate.swift in Sources */,
-				CD9FF01F22A9576F003BBF00 /* UltimosCollectionViewCell.swift in Sources */,
 				CD2603A52298709400D07513 /* dashboardViewController.swift in Sources */,
+				CD9F0BF222A9E446003A2C2D /* UltimosCollectionViewCell.swift in Sources */,
 				CD2603A72298759D00D07513 /* UIView+Extensions.swift in Sources */,
+				CD9F0BF422A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift in Sources */,
 				CD53CF0F22A7EAF7002D7611 /* TodosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
