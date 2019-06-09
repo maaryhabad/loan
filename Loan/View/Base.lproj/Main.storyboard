@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pq6-tT-Wgc">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pq6-tT-Wgc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,16 +63,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDI-Pf-Mdp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Título do livro:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="59.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="59.5"/>
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
                                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,16 +87,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-37-Oxg">
-                                                <rect key="frame" x="0.0" y="79.5" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="64" width="414" height="43.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="43.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="60"/>
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="43.5"/>
                                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.91764705882352937" green="0.31764705882352939" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,16 +111,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0wX-LM-Cuo">
-                                                <rect key="frame" x="0.0" y="159.5" width="414" height="59.5"/>
+                                                <rect key="frame" x="0.0" y="127.5" width="414" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="59.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="59.5"/>
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
                                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,16 +135,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-Oh-pCB">
-                                                <rect key="frame" x="0.0" y="239" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="191.5" width="414" height="43.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número  de páginas:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="43.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="60"/>
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="43.5"/>
                                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,6 +156,21 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-zm-hzb">
+                                                <rect key="frame" x="0.0" y="255" width="414" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-EJ-Ki4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9w-kY-YZm">
+                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </pickerView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -193,6 +210,7 @@
                         <outlet property="ISBN" destination="DFe-Fq-mE6" id="veH-wd-Pwj"/>
                         <outlet property="btnFoto" destination="ZFU-eT-ZBm" id="6XI-dX-k0Q"/>
                         <outlet property="btnSave" destination="yCP-je-nTW" id="44S-fv-RQl"/>
+                        <outlet property="categoriaPicker" destination="V9w-kY-YZm" id="7WA-34-bFJ"/>
                         <outlet property="gradiente" destination="jD3-P9-Jye" id="u09-TL-HcM"/>
                         <outlet property="infoView" destination="jYG-tr-omd" id="wol-C7-qZR"/>
                         <outlet property="nomeDoAutor" destination="PYA-Wx-B3Y" id="4Yp-G5-TEo"/>
@@ -616,7 +634,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome da pessoa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jir-Ub-ddG">
-                                        <rect key="frame" x="160.5" y="76" width="233.5" height="34"/>
+                                        <rect key="frame" x="160.5" y="78" width="233.5" height="30"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>

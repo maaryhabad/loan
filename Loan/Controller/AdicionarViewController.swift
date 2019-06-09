@@ -8,7 +8,19 @@
 
 import UIKit
 
-class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return todasAsCategorias.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return todasAsCategorias[row]
+    }
 
     var image: UIImage!
     
@@ -22,12 +34,18 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var gradiente: UIImageView!
     @IBOutlet weak var btnSave: UIButton!
+    @IBOutlet weak var categoriaPicker: UIPickerView!
     
+    var todasAsCategorias = [String]()
     
     var emprestado = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.categoriaPicker.delegate = self
+        self.categoriaPicker.dataSource = self
+        
+        todasAsCategorias = Model.instance.livros.map{$0.categoria}
         // Do any additional setup after loading the view.
     }
     
