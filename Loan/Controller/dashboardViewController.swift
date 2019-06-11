@@ -14,6 +14,7 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var ultimosView: UIView!
     @IBOutlet weak var btnAdicionar: UIButton!
     
+    
     //ADICIONAR BOTÃO MAIS
     
     override func viewDidLoad() {
@@ -29,8 +30,11 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         atualizaTresLivros()
         self.collection.reloadData()
         btnAdicionar.layer.cornerRadius = 10
-        
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
     /*
     // MARK: - Navigation

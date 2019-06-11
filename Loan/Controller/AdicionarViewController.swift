@@ -56,11 +56,13 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         gradiente.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
         btnSave.layer.cornerRadius = 10
+        categoriaPicker.setValue(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), forKeyPath: "textColor")
+
     }
     
     @IBAction func takePhoto(_ sender: Any) {
         imagePicker = UIImagePickerController()
-        imagePicker.delegate = self// as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.delegate = self
         imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
@@ -81,20 +83,15 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         numeroDePaginas.resignFirstResponder()
         
     }
-    //botao de salvar (pegar o livro = newlivro (com as informações dentro).
-    
     
     @IBAction func btnSalvar(_ sender: Any) {
-        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: image, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "", data: "", categoria: "")
+        let model = Livro(nome: nomeDoLivro.text!, autor: nomeDoAutor.text!, capaDoLivro: image, ISBN: ISBN.text!, numeroDePag: Int(numeroDePaginas.text!)!, emprestado: false, paraQuem: "", data: "", categoria: "") //tem que salvar a categoria selecionada pelo picker
         
         Model.instance.livros.append(model)
         print(model)
         print(Model.instance.livros)
         
         self.navigationController?.popViewController(animated: true)
-        
-        //criar um novo livro,
-        //inserir as informações
         
     }
     

@@ -24,7 +24,6 @@ class ColecaoViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Do any additional setup after loading the view.
     }
     
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categorias.count
