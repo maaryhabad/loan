@@ -1,0 +1,6 @@
+framework module Pods_LoanUITests {
+  umbrella header "Pods-LoanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

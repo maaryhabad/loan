@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class AdicionarViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -47,6 +47,25 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         
         todasAsCategorias = Model.instance.livros.map{$0.categoria}
         // Do any additional setup after loading the view.
+        
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDismiss), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            UIView.animate(withDuration: 1) {
+                self.photoView.isHidden = true
+                self.infoView.transform = self.infoView.transform.translatedBy(x: 0, y: -keyboardRect.height)
+            }
+        }
+    }
+    
+    @objc func keyboardWillDismiss(_ notification: NSNotification) {
+        self.photoView.isHidden = false
+        self.infoView.transform = .identity
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,7 +114,6 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate,
         
     }
     
-
     
     
     

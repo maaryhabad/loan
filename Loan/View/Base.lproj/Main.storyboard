@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pq6-tT-Wgc">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pq6-tT-Wgc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="71P-gs-Ft6">
+            <objects>
+                <viewController id="WPL-xJ-Tdc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FBG-rg-6ed">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MBq-WR-U7n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RkL-6o-syB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxL-9w-LSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-686"/>
+        </scene>
         <!--Adicionar-->
         <scene sceneID="Q1i-St-8T2">
             <objects>
@@ -46,142 +60,30 @@
                                     <constraint firstItem="ZFU-eT-ZBm" firstAttribute="centerX" secondItem="jD3-P9-Jye" secondAttribute="centerX" id="e9G-15-fbp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-je-nTW">
-                                <rect key="frame" x="103.5" y="733.5" width="207" height="40.5"/>
-                                <color key="backgroundColor" red="0.3921568627" green="0.64705882349999999" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Salvar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnSalvar:" destination="Efl-M7-YpC" eventType="touchUpInside" id="R47-02-wtx"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYG-tr-omd">
-                                <rect key="frame" x="0.0" y="414" width="414" height="299"/>
+                                <rect key="frame" x="0.0" y="414" width="414" height="363.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-fQ-ZFK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDI-Pf-Mdp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Título do livro:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByK-zQ-hmM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blF-RH-LG4">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
-                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-37-Oxg">
-                                                <rect key="frame" x="0.0" y="64" width="414" height="43.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-bU-eTH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="43.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome do primeiro autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYA-Wx-B3Y">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="43.5"/>
-                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" red="0.91764705882352937" green="0.31764705882352939" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0wX-LM-Cuo">
-                                                <rect key="frame" x="0.0" y="127.5" width="414" height="44"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-Hv-TyS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número do ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-Fq-mE6">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
-                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-Oh-pCB">
-                                                <rect key="frame" x="0.0" y="191.5" width="414" height="43.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número  de páginas:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-kH-MrY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="43.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o número de páginas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92E-e4-BZO">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="43.5"/>
-                                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                                <color key="value" red="0.5725490196078431" green="0.5725490196078431" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-zm-hzb">
-                                                <rect key="frame" x="0.0" y="255" width="414" height="44"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-EJ-Ki4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="44"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9w-kY-YZm">
-                                                        <rect key="frame" x="212" y="0.0" width="202" height="44"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </pickerView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8OB-Cq-ymH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="363.5"/>
+                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qUj-tL-ImO">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qUj-tL-ImO" id="FKF-3f-CDb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="width" secondItem="jYG-tr-omd" secondAttribute="width" id="Fu5-sl-6oN"/>
-                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="height" secondItem="jYG-tr-omd" secondAttribute="height" id="Wzr-GW-fnG"/>
-                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="centerY" secondItem="jYG-tr-omd" secondAttribute="centerY" id="mGS-hU-lAa"/>
-                                    <constraint firstItem="xhF-fQ-ZFK" firstAttribute="centerX" secondItem="jYG-tr-omd" secondAttribute="centerX" id="qXQ-h7-JGb"/>
+                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="centerY" secondItem="jYG-tr-omd" secondAttribute="centerY" id="7QA-kw-3Yh"/>
+                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="height" secondItem="jYG-tr-omd" secondAttribute="height" id="Osi-mN-zXu"/>
+                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="centerX" secondItem="jYG-tr-omd" secondAttribute="centerX" id="chk-qN-C0j"/>
+                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="width" secondItem="jYG-tr-omd" secondAttribute="width" id="kQH-8a-Yjd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -193,11 +95,7 @@
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="9xz-jB-Bxm"/>
                             <constraint firstItem="jYG-tr-omd" firstAttribute="top" secondItem="jD3-P9-Jye" secondAttribute="bottom" constant="10" id="A7I-Pw-aeG"/>
                             <constraint firstItem="jYG-tr-omd" firstAttribute="width" secondItem="Bq3-96-dwm" secondAttribute="width" id="BmC-HZ-cRv"/>
-                            <constraint firstItem="yCP-je-nTW" firstAttribute="bottom" secondItem="4Hg-PE-CIy" secondAttribute="bottom" id="O8E-eW-bhX"/>
-                            <constraint firstItem="jYG-tr-omd" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.37" id="Vm6-cO-9TT"/>
-                            <constraint firstItem="yCP-je-nTW" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="d7c-5C-uRx"/>
-                            <constraint firstItem="yCP-je-nTW" firstAttribute="width" secondItem="Bq3-96-dwm" secondAttribute="width" multiplier="0.5" id="gla-uv-amL"/>
-                            <constraint firstItem="yCP-je-nTW" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.05" id="kMM-gr-8sO"/>
+                            <constraint firstItem="jYG-tr-omd" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.45" id="Vm6-cO-9TT"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.5" id="tiH-rF-uY4"/>
                             <constraint firstItem="jYG-tr-omd" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="zF6-EK-m5e"/>
                         </constraints>
@@ -207,15 +105,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="ISBN" destination="DFe-Fq-mE6" id="veH-wd-Pwj"/>
                         <outlet property="btnFoto" destination="ZFU-eT-ZBm" id="6XI-dX-k0Q"/>
-                        <outlet property="btnSave" destination="yCP-je-nTW" id="44S-fv-RQl"/>
-                        <outlet property="categoriaPicker" destination="V9w-kY-YZm" id="7WA-34-bFJ"/>
                         <outlet property="gradiente" destination="jD3-P9-Jye" id="u09-TL-HcM"/>
                         <outlet property="infoView" destination="jYG-tr-omd" id="wol-C7-qZR"/>
-                        <outlet property="nomeDoAutor" destination="PYA-Wx-B3Y" id="4Yp-G5-TEo"/>
-                        <outlet property="nomeDoLivro" destination="blF-RH-LG4" id="R4C-BR-b7i"/>
-                        <outlet property="numeroDePaginas" destination="92E-e4-BZO" id="B2w-AP-Zkr"/>
                         <outlet property="photoView" destination="iC8-U7-cfu" id="4hB-Oq-f6j"/>
                     </connections>
                 </viewController>
@@ -226,7 +118,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1900" y="-34"/>
+            <point key="canvasLocation" x="1900" y="-3"/>
         </scene>
         <!--Todos os livros-->
         <scene sceneID="1nC-7p-w1H">
@@ -634,7 +526,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome da pessoa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jir-Ub-ddG">
-                                        <rect key="frame" x="160.5" y="85.5" width="233.5" height="30"/>
+                                        <rect key="frame" x="160.5" y="83.5" width="233.5" height="34"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.91764705879999997" green="0.31764705879999999" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
