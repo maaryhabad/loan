@@ -7,6 +7,8 @@ target 'Loan' do
 
   # Pods for Loan
 	pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'BarcodeScanner'
 
   target 'LoanTests' do
     inherit! :search_paths

@@ -41,11 +41,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-eT-ZBm">
                                         <rect key="frame" x="93" y="40.5" width="228" height="323"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Clique para tirar a foto">
+                                        <state key="normal" title="Clique para ler o código de barras">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="takePhoto:" destination="Efl-M7-YpC" eventType="touchUpInside" id="OAB-fk-oLs"/>
+                                            <action selector="lerCodigo:" destination="Efl-M7-YpC" eventType="touchUpInside" id="qs0-YG-sEB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -112,11 +112,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3e-12-T2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="xtv-qz-5Td">
-                    <connections>
-                        <action selector="tocouNaView:" destination="Efl-M7-YpC" id="HDa-Sj-7pZ"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xtv-qz-5Td"/>
             </objects>
             <point key="canvasLocation" x="1900" y="-3"/>
         </scene>

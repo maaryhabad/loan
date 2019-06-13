@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		CBBE60696EC8544A6837ECFC /* Pods_Loan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E641CA7EE633C64F491CCCFC /* Pods_Loan.framework */; };
 		CD2603A52298709400D07513 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2603A42298709400D07513 /* dashboardViewController.swift */; };
 		CD2603A72298759D00D07513 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2603A62298759D00D07513 /* UIView+Extensions.swift */; };
+		CD5303C822B2957F00BB0FDF /* BarCode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5303C722B2957F00BB0FDF /* BarCode+Extensions.swift */; };
 		CD53CF0F22A7EAF7002D7611 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD53CF0E22A7EAF7002D7611 /* TodosViewController.swift */; };
 		CD695084228AE88000B6FAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD695083228AE88000B6FAD4 /* AppDelegate.swift */; };
 		CD695089228AE88000B6FAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD695087228AE88000B6FAD4 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		CD69508E228AE88200B6FAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD69508C228AE88200B6FAD4 /* LaunchScreen.storyboard */; };
 		CD695099228AE88200B6FAD4 /* LoanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD695098228AE88200B6FAD4 /* LoanTests.swift */; };
 		CD6950A4228AE88200B6FAD4 /* LoanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6950A3228AE88200B6FAD4 /* LoanUITests.swift */; };
-		CD74D1D2228EF6BA00B84B6E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD74D1D1228EF6BA00B84B6E /* Info.plist */; };
 		CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */; };
 		CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D2ABB228EDDFA00CB76E9 /* Model.swift */; };
 		CD9F0BF222A9E446003A2C2D /* UltimosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */; };
@@ -29,6 +29,7 @@
 		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
 		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
 		CDDFCF0422B275610037C422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDDFCF0322B275610037C422 /* GoogleService-Info.plist */; };
+		CDFC463F22B27E2400EBBFEB /* DAOFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC463E22B27E2400EBBFEB /* DAOFirebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9C8069DC6F59806DC6FEAF89 /* Pods_LoanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2603A42298709400D07513 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
 		CD2603A62298759D00D07513 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CD5303C722B2957F00BB0FDF /* BarCode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BarCode+Extensions.swift"; sourceTree = "<group>"; };
 		CD53CF0E22A7EAF7002D7611 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		CD695080228AE88000B6FAD4 /* Loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD695083228AE88000B6FAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
 		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CDDFCF0322B275610037C422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDFC463E22B27E2400EBBFEB /* DAOFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFirebase.swift; sourceTree = "<group>"; };
 		DFB31BDF69D564B276D76EB8 /* Pods-Loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loan.debug.xcconfig"; path = "Target Support Files/Pods-Loan/Pods-Loan.debug.xcconfig"; sourceTree = "<group>"; };
 		E37A73E9E247DE317139396E /* Pods-LoanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoanTests.debug.xcconfig"; path = "Target Support Files/Pods-LoanTests/Pods-LoanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E641CA7EE633C64F491CCCFC /* Pods_Loan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CD74D1D1228EF6BA00B84B6E /* Info.plist */,
+				CD695083228AE88000B6FAD4 /* AppDelegate.swift */,
 				CD86C00522A94CA600B65AC0 /* Extensions */,
 				CD86C00422A94BB600B65AC0 /* Controller */,
 				CD86C00322A94BAC00B65AC0 /* View */,
@@ -180,6 +184,7 @@
 				CDDFCF0322B275610037C422 /* GoogleService-Info.plist */,
 				CD7D2ABA228EDDFA00CB76E9 /* Livro.swift */,
 				CD7D2ABB228EDDFA00CB76E9 /* Model.swift */,
+				CDFC463E22B27E2400EBBFEB /* DAOFirebase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,7 +209,6 @@
 				CDAA2F1A22925970009B3F3A /* LivroViewController.swift */,
 				CD2603A42298709400D07513 /* dashboardViewController.swift */,
 				CD53CF0E22A7EAF7002D7611 /* TodosViewController.swift */,
-				CD695083228AE88000B6FAD4 /* AppDelegate.swift */,
 				CD9FF02022A9589E003BBF00 /* ColecaoViewController.swift */,
 			);
 			path = Controller;
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CD2603A62298759D00D07513 /* UIView+Extensions.swift */,
+				CD5303C722B2957F00BB0FDF /* BarCode+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,7 +233,6 @@
 				7349C72704AE831A964A5875 /* Pods-LoanUITests.debug.xcconfig */,
 				7058B3293D4B62D2FAF7FCF3 /* Pods-LoanUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD74D1D2228EF6BA00B84B6E /* Info.plist in Resources */,
 				CD69508E228AE88200B6FAD4 /* LaunchScreen.storyboard in Resources */,
 				CDDFCF0422B275610037C422 /* GoogleService-Info.plist in Resources */,
 				CD69508B228AE88200B6FAD4 /* Assets.xcassets in Resources */,
@@ -461,11 +464,13 @@
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */,
+				CD5303C822B2957F00BB0FDF /* BarCode+Extensions.swift in Sources */,
 				CD695084228AE88000B6FAD4 /* AppDelegate.swift in Sources */,
 				CD2603A52298709400D07513 /* dashboardViewController.swift in Sources */,
 				CD9F0BF222A9E446003A2C2D /* UltimosCollectionViewCell.swift in Sources */,
 				CD2603A72298759D00D07513 /* UIView+Extensions.swift in Sources */,
 				CD9F0BF422A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift in Sources */,
+				CDFC463F22B27E2400EBBFEB /* DAOFirebase.swift in Sources */,
 				CD53CF0F22A7EAF7002D7611 /* TodosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
