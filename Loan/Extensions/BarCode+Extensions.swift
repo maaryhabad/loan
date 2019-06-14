@@ -13,7 +13,9 @@ import BarcodeScanner
 extension AdicionarViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
-        controller.reset()
+        DAOGoogleBooksAPI.getBook(ISBN: code){ livro in
+            //função completion aqui.
+        }
     }
 }
 
@@ -28,5 +30,6 @@ extension AdicionarViewController: BarcodeScannerErrorDelegate {
 extension AdicionarViewController: BarcodeScannerDismissalDelegate {
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
         controller.dismiss(animated: true, completion: nil)
+        controller.reset()
     }
 }

@@ -57,11 +57,6 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate 
 //        self.infoView.transform = .identity
 //    }
 //
-    override func viewWillAppear(_ animated: Bool) {
-        let viewController = BarcodeScannerViewController()
-        viewController.headerViewController.titleLabel.text = "Escaneie o código de barras"
-        viewController.headerViewController.closeButton.tintColor = .red
-    }
     
 //    @IBAction func takePhoto(_ sender: Any) {
 //        imagePicker = UIImagePickerController()
@@ -74,6 +69,8 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate 
     @IBAction func lerCodigo(_ sender: Any) {
         let viewController = BarcodeScannerViewController()
         viewController.codeDelegate = self
+        viewController.headerViewController.titleLabel.text = "Escaneie o código de barras"
+        viewController.headerViewController.closeButton.tintColor = .red
         
         present(viewController, animated: true)
     }

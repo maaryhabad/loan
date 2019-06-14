@@ -9,6 +9,7 @@ target 'Loan' do
 	pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'BarcodeScanner'
+  pod 'Alamofire', '~> 5.0.0-beta.5'
 
   target 'LoanTests' do
     inherit! :search_paths
