@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class UltimosCollectionViewCell: UICollectionViewCell {
     
@@ -14,7 +15,7 @@ class UltimosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelNome: UILabel!
     
     func displayLivro(livro: Livro) {
-        imageCapa.image = livro.capaDoLivro
+        imageCapa.af_setImage(withURL: livro.capaDoLivro)
         labelNome.text = livro.nome
         
     }

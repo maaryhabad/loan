@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class LivroViewController: UIViewController {
     
@@ -27,9 +28,17 @@ class LivroViewController: UIViewController {
     
     func refreshInterface() {
         
-        imgView.image = livroSelecionado.capaDoLivro
+        imgView.af_setImage(withURL: livroSelecionado.capaDoLivro)
         nomeDoLivro.text = livroSelecionado.nome
-        nomeDoAutor.text = livroSelecionado.autor
+        var autores = ""
+        
+        for autor in livroSelecionado.autor {
+            autores += "\(autor), "
+        } 
+        
+        print(autores)
+        
+        nomeDoAutor.text = autores
         ISBN.text = "ISBN: \(livroSelecionado.ISBN)"
         numeroDePaginas.text = "\(livroSelecionado.numeroDePag) páginas"
         

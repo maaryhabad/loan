@@ -15,15 +15,11 @@ class DAOGoogleBooksAPI {
     static func getBook(ISBN: String, completionHandler: @escaping (Livro?) -> ()) {
         
         let apiKey = "AIzaSyDvWzT9jQnYLFhuKQf3-mTS7NsQ4fiaxg8"
-        let URL = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
+        let apiURL = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
         
-        print("\(URL)\(ISBN)&key=\(apiKey)")
+        print("\(apiURL)\(ISBN)&key=\(apiKey)")
         
-        AF.request("\(URL)\(ISBN)&key=\(apiKey)").responseJSON { response in
- 
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
+        Alamofire.request("\(apiURL)\(ISBN)&key=\(apiKey)").responseJSON { response in
             
             switch response.result {
             case let .success(value):
@@ -32,11 +28,49 @@ class DAOGoogleBooksAPI {
                 completionHandler(nil)
                 if dic["totalItems"] as? Int == 1 {
                     let bookDict = (dic["items"] as! [[String:Any]])[0]
-                    print(bookDict)
-                    let nome = (bookDict["volumeInfo"] as! [String:Any])["title"] as! String
-                    print("\(nome)")
-                    let autor = (bookDict["volumeInfo"] as! [String:Any])["authors"] as! String
                     
+                    print(bookDict) // ***fazer conferência de dados da API! Se existe ou não***
+                    let nome = (bookDict["volumeInfo"] as! [String:Any])["title"] as! String
+                    let autor = (bookDict["volumeInfo"] as! [String:Any])["authors"] as! [String]
+                    let numeroDePag = (bookDict["volumeInfo"] as! [String:Any])["pageCount"] as! Int
+                    
+                    
+                    let capa = (bookDict["volumeInfo"] as! [String:Any])
+                    
+                    if let imageLinks = capa["imageLinks"] as? [String: Any] {
+                        let strDaImagem = imageLinks["thumbnail"] as! String
+                        if let url = URL(string: strDaImagem) {
+                            var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                            Model.instance.livros.append(novoLivro)
+                        }
+                        
+                    } else {
+                        let url = URL(string: "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613")!
+                        var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                        Model.instance.livros.append(novoLivro)
+                    }
+//                    let capaDoLivro = (bookDict["volumeInfo"] as! [String:Any])["thumbnail"] as? String
+                    print("***************\n\n\n\(nome)\n\(autor)\n\(ISBN)\n\(numeroDePag)\n\(capa)***************")
+                    
+                    
+                    
+                    
+//                    let capaDoLivro: UIImage
+//                    if let data = try? Data(contentsOf: urlDaImagem!) {
+//                        capaDoLivro = UIImage(data: data)!
+//                        novoLivro.capaDoLivro = capaDoLivro
+//                        Model.instance.livros.append(novoLivro)
+//                    } else {
+//                        Model.instance.livros.append(novoLivro)
+//                    }
+                    
+                    
+                    
+
+//                    
+//                    let novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: capaDoLivro!, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                    
+                   // print(Model.instance.livros)
                     
                 } else {
                     completionHandler(nil)
@@ -51,22 +85,6 @@ class DAOGoogleBooksAPI {
         }
     }
     
-//    static func convertToDictionary(text: String) -> [String: Any]? {
-//        if let data = text.data(using: .utf8) {
-//            do {
-//                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
-//        return nil
-//    }
-    
-//    let dict = convertToDictionary(text: str)
     
 }
-//trocar a chamada da API (com a minha key e passando o isbn que sai do leitor de código de barras)
-//passar o método get (do jeito que está na doc. do Alamofire
-//converter o valor de JSON para dicionário (na linha 24)
-//retorna do getBooks um objeto livro populado ou nil (daí se retornar new ele tem que permitir a edição do usuário
-//chamar get books no BarCode+Extensions
+
