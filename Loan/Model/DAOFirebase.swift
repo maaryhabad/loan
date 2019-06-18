@@ -11,7 +11,32 @@ import Firebase
 
 class DAOFirebase {
     
-    func save(livro: Livro){
+    static func save(livro: Livro){
+        
+        var novoLivro = livro
+        
+        let db = Firestore.firestore()
+        
+        var ref: DocumentReference? = nil
+        
+        ref = db.collection("livros").addDocument(data: [
+            "nome": novoLivro.nome,
+            "autor": novoLivro.autor,
+            "capaDoLivro": novoLivro.capaDoLivro,
+            "ISBN": novoLivro.ISBN,
+            "numeroDePag": novoLivro.numeroDePag,
+            "emprestado": novoLivro.emprestado,
+            "paraQuem": novoLivro.paraQuem,
+            "data": novoLivro.data,
+            "categoria": novoLivro.categoria
+        ])  { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+        
         // pegar livro
         // salvar na nuvem
     }

@@ -42,12 +42,14 @@ class DAOGoogleBooksAPI {
                         if let url = URL(string: strDaImagem) {
                             var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
                             Model.instance.livros.append(novoLivro)
+                            DAOFirebase.save(livro: novoLivro)
                         }
                         
                     } else {
                         let url = URL(string: "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613")!
                         var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
                         Model.instance.livros.append(novoLivro)
+                        DAOFirebase.save(livro: novoLivro)
                     }
 //                    let capaDoLivro = (bookDict["volumeInfo"] as! [String:Any])["thumbnail"] as? String
                     print("***************\n\n\n\(nome)\n\(autor)\n\(ISBN)\n\(numeroDePag)\n\(capa)***************")
