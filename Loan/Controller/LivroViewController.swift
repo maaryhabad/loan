@@ -28,7 +28,8 @@ class LivroViewController: UIViewController {
     
     func refreshInterface() {
         
-        imgView.af_setImage(withURL: livroSelecionado.capaDoLivro)
+        let url = URL(fileURLWithPath: livroSelecionado.capaDoLivro)
+        imgView.af_setImage(withURL: url)
         nomeDoLivro.text = livroSelecionado.nome
         var autores = ""
         

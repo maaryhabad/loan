@@ -13,7 +13,7 @@ class Livro {
     
     var nome: String
     var autor: [String] //colocar ISBN
-    var capaDoLivro: URL
+    var capaDoLivro: String
     var ISBN: String
     var numeroDePag: Int
     var emprestado: Bool
@@ -21,7 +21,7 @@ class Livro {
     var data: String
     var categoria: String
     
-    init(nome: String, autor: [String], capaDoLivro: URL, ISBN: String, numeroDePag: Int, emprestado: Bool, paraQuem: String, data: String, categoria: String) {
+    init(nome: String, autor: [String], capaDoLivro: String, ISBN: String, numeroDePag: Int, emprestado: Bool, paraQuem: String, data: String, categoria: String) {
         self.nome = nome
         self.autor = autor
         self.capaDoLivro = capaDoLivro

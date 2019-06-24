@@ -10,6 +10,8 @@ target 'Loan' do
   # Pods for Loan
 	pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'BarcodeScanner'
   pod 'Alamofire'
   pod 'AlamofireImage'

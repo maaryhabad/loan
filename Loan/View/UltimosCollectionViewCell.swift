@@ -15,7 +15,8 @@ class UltimosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelNome: UILabel!
     
     func displayLivro(livro: Livro) {
-        imageCapa.af_setImage(withURL: livro.capaDoLivro)
+        let url = URL(string: livro.capaDoLivro)!
+        imageCapa.af_setImage(withURL: url)
         labelNome.text = livro.nome
         
     }

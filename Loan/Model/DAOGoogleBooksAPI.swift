@@ -40,14 +40,16 @@ class DAOGoogleBooksAPI {
                     if let imageLinks = capa["imageLinks"] as? [String: Any] {
                         let strDaImagem = imageLinks["thumbnail"] as! String
                         if let url = URL(string: strDaImagem) {
-                            var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                            var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: strDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
                             Model.instance.livros.append(novoLivro)
                             DAOFirebase.save(livro: novoLivro)
                         }
                         
                     } else {
-                        let url = URL(string: "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613")!
-                        var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: url, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                        let stringDaImagem = "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613"
+                        
+                        let url = URL(string: stringDaImagem)!
+                        var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: stringDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
                         Model.instance.livros.append(novoLivro)
                         DAOFirebase.save(livro: novoLivro)
                     }
