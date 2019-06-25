@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class dashboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -30,7 +31,7 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         atualizaTresLivros()
         self.collection.reloadData()
         btnAdicionar.layer.cornerRadius = 10
-
+        DAOFirebase.load()
     }
     
     override func viewDidAppear(_ animated: Bool) {

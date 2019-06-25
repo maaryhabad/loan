@@ -20,8 +20,9 @@ class Livro {
     var paraQuem: String
     var data: String
     var categoria: String
+    var usuario: String
     
-    init(nome: String, autor: [String], capaDoLivro: String, ISBN: String, numeroDePag: Int, emprestado: Bool, paraQuem: String, data: String, categoria: String) {
+    init(nome: String, autor: [String], capaDoLivro: String, ISBN: String, numeroDePag: Int, emprestado: Bool, paraQuem: String, data: String, categoria: String, usuario: String) {
         self.nome = nome
         self.autor = autor
         self.capaDoLivro = capaDoLivro
@@ -31,5 +32,6 @@ class Livro {
         self.paraQuem = paraQuem
         self.data = data
         self.categoria = categoria
+        self.usuario = usuario
     }
 }

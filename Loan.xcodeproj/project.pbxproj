@@ -31,6 +31,7 @@
 		CDA8C79922B3C42A00309E09 /* DAOGoogleBooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8C79822B3C42A00309E09 /* DAOGoogleBooksAPI.swift */; };
 		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
 		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
+		CDD28C5422C2438D00AC40E4 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD28C5322C2438D00AC40E4 /* UIViewController+Extensions.swift */; };
 		CDDFCF0422B275610037C422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDDFCF0322B275610037C422 /* GoogleService-Info.plist */; };
 		CDF5B5FF22C0FC3A00C1E4ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF5B5FE22C0FC3A00C1E4ED /* SignInViewController.swift */; };
 		CDF5B60122C1066400C1E4ED /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF5B60022C1066400C1E4ED /* CadastroViewController.swift */; };
@@ -88,6 +89,7 @@
 		CDA8C79822B3C42A00309E09 /* DAOGoogleBooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOGoogleBooksAPI.swift; sourceTree = "<group>"; };
 		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
 		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CDD28C5322C2438D00AC40E4 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CDDFCF0322B275610037C422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDF5B5FE22C0FC3A00C1E4ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CDF5B60022C1066400C1E4ED /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				CD2603A62298759D00D07513 /* UIView+Extensions.swift */,
 				CD5303C722B2957F00BB0FDF /* BarCode+Extensions.swift */,
+				CDD28C5322C2438D00AC40E4 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */,
 				CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */,
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
+				CDD28C5422C2438D00AC40E4 /* UIViewController+Extensions.swift in Sources */,
 				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */,
 				CDF5B5FF22C0FC3A00C1E4ED /* SignInViewController.swift in Sources */,

@@ -8,12 +8,13 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class DAOFirebase {
     
     static func save(livro: Livro){
         
-        var novoLivro = livro
+        let novoLivro = livro
         
         let db = Firestore.firestore()
         
@@ -28,7 +29,8 @@ class DAOFirebase {
             "emprestado": novoLivro.emprestado,
             "paraQuem": novoLivro.paraQuem,
             "data": novoLivro.data,
-            "categoria": novoLivro.categoria
+            "categoria": novoLivro.categoria,
+            "usuario": novoLivro.usuario
         ])  { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -37,42 +39,25 @@ class DAOFirebase {
             }
         }
         
-        // pegar livro
-        // salvar na nuvem
-    }
-    
-    static func save() {
-        // Add a new document with a generated ID
-        let db = Firestore.firestore()
-        
-        var ref: DocumentReference? = nil
-        
-        ref = db.collection("users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
     }
     
     static func load() {
         let db = Firestore.firestore()
         
-        db.collection("users").getDocuments() { (querySnapshot, err) in
+        let usuarioID = Auth.auth().currentUser!.uid
+        
+        let livrosFirebase = db.collection("livros").whereField("usuario", isEqualTo: usuarioID).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
+                    
                 }
             }
         // pegar todos os livros
         // salvar no array
         }
+        print(livrosFirebase)
     }
 }

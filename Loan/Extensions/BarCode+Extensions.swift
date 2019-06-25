@@ -14,7 +14,13 @@ extension AdicionarViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
         DAOGoogleBooksAPI.getBook(ISBN: code){ livro in
-            //função completion aqui.
+            
+            controller.dismiss(animated: true, completion: nil)
+            
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "livro") as? LivroViewController {
+                vc.livroSelecionado = livro
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }

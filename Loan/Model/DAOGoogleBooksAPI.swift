@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import FirebaseAuth
 
 class DAOGoogleBooksAPI {
     
@@ -25,7 +26,7 @@ class DAOGoogleBooksAPI {
             case let .success(value):
                 print("success")
                 let dic = value as! [String:Any]
-                completionHandler(nil)
+
                 if dic["totalItems"] as? Int == 1 {
                     let bookDict = (dic["items"] as! [[String:Any]])[0]
                     
@@ -37,21 +38,25 @@ class DAOGoogleBooksAPI {
                     
                     let capa = (bookDict["volumeInfo"] as! [String:Any])
                     
+                    let usuarioID = Auth.auth().currentUser!.uid
+                    
                     if let imageLinks = capa["imageLinks"] as? [String: Any] {
                         let strDaImagem = imageLinks["thumbnail"] as! String
                         if let url = URL(string: strDaImagem) {
-                            var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: strDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                            var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: strDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "", usuario: usuarioID)
                             Model.instance.livros.append(novoLivro)
                             DAOFirebase.save(livro: novoLivro)
+                            completionHandler(novoLivro)
                         }
                         
                     } else {
                         let stringDaImagem = "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613"
                         
                         let url = URL(string: stringDaImagem)!
-                        var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: stringDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "")
+                        var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: stringDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "", usuario: usuarioID)
                         Model.instance.livros.append(novoLivro)
                         DAOFirebase.save(livro: novoLivro)
+                        completionHandler(novoLivro)
                     }
 //                    let capaDoLivro = (bookDict["volumeInfo"] as! [String:Any])["thumbnail"] as? String
                     print("***************\n\n\n\(nome)\n\(autor)\n\(ISBN)\n\(numeroDePag)\n\(capa)***************")
@@ -67,8 +72,6 @@ class DAOGoogleBooksAPI {
 //                    } else {
 //                        Model.instance.livros.append(novoLivro)
 //                    }
-                    
-                    
                     
 
 //                    

@@ -47,9 +47,10 @@ class LivroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshInterface()
         // Do any additional setup after loading the view.
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         viewInfor.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
         //emprestadoView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
@@ -58,6 +59,7 @@ class LivroViewController: UIViewController {
         emprestadoView.layer.cornerRadius = 10
         botaoSalvar.layer.cornerRadius = 10
         datePicker.setValue(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), forKeyPath: "textColor")
+        refreshInterface()
         //se a data tiver alguma coisa, o date picker tem que ficar com a data que tem no modelo, se não, ele tem que abrir com o dia de hoje.
     }
     

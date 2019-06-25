@@ -69,6 +69,8 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate 
     @IBAction func lerCodigo(_ sender: Any) {
         let viewController = BarcodeScannerViewController()
         viewController.codeDelegate = self
+        viewController.dismissalDelegate = self
+        viewController.errorDelegate = self
         viewController.headerViewController.titleLabel.text = "Escaneie o código de barras"
         viewController.headerViewController.closeButton.tintColor = .red
         
