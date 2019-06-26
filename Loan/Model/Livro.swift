@@ -34,4 +34,42 @@ class Livro {
         self.categoria = categoria
         self.usuario = usuario
     }
+    
+    func mapToDictionary() -> [String: Any] {
+        
+        var livroData: [String:Any] = [:]
+        
+        livroData["nome"] = self.nome
+        livroData["autor"] = self.autor
+        livroData["capaDoLivro"] = self.capaDoLivro
+        livroData["ISBN"] = self.ISBN
+        livroData["numeroDePag"] = self.numeroDePag
+        livroData["emprestado"] = self.emprestado
+        livroData["paraQuem"] = self.paraQuem
+        livroData["data"] = self.data
+        livroData["categoria"] = self.categoria
+        livroData["usuario"] = self.usuario
+        
+        return livroData
+    }
+    
+    static func mapToObject(livroData: [String: Any]) -> Livro {
+        
+        let nome: String = livroData["nome"] as! String
+        let autor: [String] = livroData["autor"] as! [String]
+        let capaDoLivro: String = livroData["capaDoLivro"] as! String
+        let ISBN: String = livroData["ISBN"] as! String
+        let numeroDePag: Int = livroData["numeroDePag"] as! Int
+        let emprestado: Bool = (livroData["emprestado"] != nil)
+        let paraQuem: String = livroData["paraQuem"] as! String
+        let data: String = livroData["data"] as! String
+        let categoria: String = livroData["categoria"] as! String
+        let usuario: String = livroData["usuario"] as! String
+        
+        
+        let livro = Livro(nome: nome, autor: autor, capaDoLivro: capaDoLivro, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: emprestado, paraQuem: paraQuem, data: data, categoria: categoria, usuario: usuario)
+        
+        return livro
+    }
+    
 }

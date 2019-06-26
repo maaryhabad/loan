@@ -50,7 +50,7 @@ class DAOGoogleBooksAPI {
                         }
                         
                     } else {
-                        let stringDaImagem = "https://ixxidesign.azureedge.net/media/1676570/Mickey-Mouse-1.jpg?mode=max&width=562&height=613"
+                        let stringDaImagem = "livroplace.png"
                         
                         let url = URL(string: stringDaImagem)!
                         var novoLivro = Livro(nome: nome, autor: autor, capaDoLivro: stringDaImagem, ISBN: ISBN, numeroDePag: numeroDePag, emprestado: false, paraQuem: "", data: "", categoria: "", usuario: usuarioID)
@@ -80,11 +80,14 @@ class DAOGoogleBooksAPI {
                    // print(Model.instance.livros)
                     
                 } else {
+                    print("não achou o livro")
                     completionHandler(nil)
+                    
+                    //mudar a tela pra tela de adicionar novo livro.
                 }
                 
             case let .failure(error):
-                print("error")
+                print("falhou o livro")
                 print(error)
                 completionHandler(nil)
             }

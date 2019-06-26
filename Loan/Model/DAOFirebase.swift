@@ -8,11 +8,16 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 import FirebaseAuth
 
 class DAOFirebase {
     
     static func save(livro: Livro){
+        
+        //pega o livro
+        //converte pra dicionário
+        //salva na nuvem
         
         let novoLivro = livro
         
@@ -20,28 +25,19 @@ class DAOFirebase {
         
         var ref: DocumentReference? = nil
         
-        ref = db.collection("livros").addDocument(data: [
-            "nome": novoLivro.nome,
-            "autor": novoLivro.autor,
-            "capaDoLivro": novoLivro.capaDoLivro,
-            "ISBN": novoLivro.ISBN,
-            "numeroDePag": novoLivro.numeroDePag,
-            "emprestado": novoLivro.emprestado,
-            "paraQuem": novoLivro.paraQuem,
-            "data": novoLivro.data,
-            "categoria": novoLivro.categoria,
-            "usuario": novoLivro.usuario
-        ])  { err in
+        var livroData: [String:Any] = livro.mapToDictionary()
+        
+        ref = db.collection("livros").addDocument(data: livroData){ err in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
-        
     }
     
-    static func load() {
+    
+    static func loadLivros(completion: @escaping () -> ()) {
         let db = Firestore.firestore()
         
         let usuarioID = Auth.auth().currentUser!.uid
@@ -49,15 +45,23 @@ class DAOFirebase {
         let livrosFirebase = db.collection("livros").whereField("usuario", isEqualTo: usuarioID).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
+                //quando iniciar o app, se não tiver nenhum livro, tem que ir direto pra página de adicionar
             } else {
+                
+                Model.instance.livros.removeAll()
+                
+                
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    let livro = Livro.mapToObject(livroData: document.data())
+                    Model.instance.livros.append(livro)
                     
+                    print("*********************************************")
+                    print("\(document.documentID) => \(document.data())")
                 }
+                
+                completion()
+                
             }
-        // pegar todos os livros
-        // salvar no array
         }
-        print(livrosFirebase)
     }
 }

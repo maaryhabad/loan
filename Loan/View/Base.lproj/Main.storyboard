@@ -38,11 +38,18 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradiente" translatesAutoresizingMaskIntoConstraints="NO" id="jD3-P9-Jye">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-eT-ZBm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-eT-ZBm">
                                         <rect key="frame" x="93" y="40.5" width="228" height="323"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Clique para ler o código de barras">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Clique para ler o código de barras">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <action selector="lerCodigo:" destination="Efl-M7-YpC" eventType="touchUpInside" id="qs0-YG-sEB"/>
@@ -60,32 +67,6 @@
                                     <constraint firstItem="ZFU-eT-ZBm" firstAttribute="centerX" secondItem="jD3-P9-Jye" secondAttribute="centerX" id="e9G-15-fbp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYG-tr-omd">
-                                <rect key="frame" x="0.0" y="414" width="414" height="363.5"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8OB-Cq-ymH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="363.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qUj-tL-ImO">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qUj-tL-ImO" id="FKF-3f-CDb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="centerY" secondItem="jYG-tr-omd" secondAttribute="centerY" id="7QA-kw-3Yh"/>
-                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="height" secondItem="jYG-tr-omd" secondAttribute="height" id="Osi-mN-zXu"/>
-                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="centerX" secondItem="jYG-tr-omd" secondAttribute="centerX" id="chk-qN-C0j"/>
-                                    <constraint firstItem="8OB-Cq-ymH" firstAttribute="width" secondItem="jYG-tr-omd" secondAttribute="width" id="kQH-8a-Yjd"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -93,11 +74,7 @@
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="top" secondItem="4Hg-PE-CIy" secondAttribute="top" id="00p-uM-GZT"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="leading" secondItem="Bq3-96-dwm" secondAttribute="leading" id="7iH-to-mP0"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="9xz-jB-Bxm"/>
-                            <constraint firstItem="jYG-tr-omd" firstAttribute="top" secondItem="jD3-P9-Jye" secondAttribute="bottom" constant="10" id="A7I-Pw-aeG"/>
-                            <constraint firstItem="jYG-tr-omd" firstAttribute="width" secondItem="Bq3-96-dwm" secondAttribute="width" id="BmC-HZ-cRv"/>
-                            <constraint firstItem="jYG-tr-omd" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.45" id="Vm6-cO-9TT"/>
                             <constraint firstItem="iC8-U7-cfu" firstAttribute="height" secondItem="Bq3-96-dwm" secondAttribute="height" multiplier="0.5" id="tiH-rF-uY4"/>
-                            <constraint firstItem="jYG-tr-omd" firstAttribute="centerX" secondItem="4Hg-PE-CIy" secondAttribute="centerX" id="zF6-EK-m5e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Hg-PE-CIy"/>
                         <connections>
@@ -107,7 +84,6 @@
                     <connections>
                         <outlet property="btnFoto" destination="ZFU-eT-ZBm" id="6XI-dX-k0Q"/>
                         <outlet property="gradiente" destination="jD3-P9-Jye" id="u09-TL-HcM"/>
-                        <outlet property="infoView" destination="jYG-tr-omd" id="wol-C7-qZR"/>
                         <outlet property="photoView" destination="iC8-U7-cfu" id="4hB-Oq-f6j"/>
                     </connections>
                 </viewController>
@@ -451,13 +427,13 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vja-nk-qmp">
                                         <rect key="frame" x="20" y="36" width="165.5" height="286.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nome do livro" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-nk-M8Y">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" text="Nome do livro" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-nk-M8Y">
                                         <rect key="frame" x="212" y="36" width="182" height="31.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do autor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-ly-5MO">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do autor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-ly-5MO">
                                         <rect key="frame" x="212" y="115.5" width="182" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

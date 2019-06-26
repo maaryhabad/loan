@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        DAOFirebase.load()
+        
+        
         
         return true
     }
@@ -45,6 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+        
+        for livro in Model.instance.livros {
+            DAOFirebase.save(livro: livro)
+        } // tem que ver se já existe o livro e se já existir não incluir.
+        
+        
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()

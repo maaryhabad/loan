@@ -27,11 +27,15 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        ultimosView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
-        atualizaTresLivros()
-        self.collection.reloadData()
-        btnAdicionar.layer.cornerRadius = 10
-        DAOFirebase.load()
+        super.viewWillAppear(animated)
+        
+        DAOFirebase.loadLivros (){
+            self.ultimosView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
+            self.atualizaTresLivros()
+            self.collection.reloadData()
+            self.btnAdicionar.layer.cornerRadius = 10
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
