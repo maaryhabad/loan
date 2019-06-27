@@ -13,10 +13,10 @@ class LivroViewController: UIViewController {
     
     
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var nomeDoLivro: UILabel!
-    @IBOutlet weak var nomeDoAutor: UILabel!
-    @IBOutlet weak var ISBN: UILabel!
-    @IBOutlet weak var numeroDePaginas: UILabel!
+    @IBOutlet weak var nomeDoLivro: UITextView!
+    @IBOutlet weak var nomeDoAutor: UITextView!
+    @IBOutlet weak var numeroDePaginas: UITextField!
+    @IBOutlet weak var ISBN: UITextField!
     @IBOutlet weak var viewInfor: UIView!
     @IBOutlet weak var emprestadoView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -24,10 +24,12 @@ class LivroViewController: UIViewController {
     @IBOutlet weak var botaoSalvar: UIButton!
     @IBOutlet weak var lblQuem: UITextField!
     
+    var clicou = false
+    
     var livroSelecionado: Livro!
     
     func refreshInterface() {
-        
+
 //        if livroSelecionado.capaDoLivro == nil {
 //            imgView.image = UIImage(named: "livroplace.png")
 //        } else
@@ -59,10 +61,14 @@ class LivroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
         viewInfor.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
         //emprestadoView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
         gradiente.layer.cornerRadius = 10
@@ -71,7 +77,66 @@ class LivroViewController: UIViewController {
         botaoSalvar.layer.cornerRadius = 10
         datePicker.setValue(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), forKeyPath: "textColor")
         refreshInterface()
+        
+        nomeDoAutor.isUserInteractionEnabled = false
+        nomeDoLivro.isUserInteractionEnabled = false
+        numeroDePaginas.isUserInteractionEnabled = false
+        ISBN.isUserInteractionEnabled = false
+        let selectedBackgroundColor = UIColor.init(red: 66/255, green: 66/255, blue: 79/255, alpha: 0)
+        
+        nomeDoAutor.backgroundColor = selectedBackgroundColor
+        nomeDoLivro.backgroundColor = selectedBackgroundColor
+        numeroDePaginas.backgroundColor = selectedBackgroundColor
+        ISBN.backgroundColor = selectedBackgroundColor
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Editar", style: .done, target: self, action: #selector(self.action(sender:)))
         //se a data tiver alguma coisa, o date picker tem que ficar com a data que tem no modelo, se não, ele tem que abrir com o dia de hoje.
+    }
+    
+    @objc func action(sender: UIBarButtonItem) {
+        
+//        clicou = true
+        var navigationButton = self.navigationItem.rightBarButtonItem!.title!
+        print(navigationButton)
+        
+        if navigationButton == "Editar" { //if let?
+            print("aqui o usuário pode editar")
+            
+            self.navigationItem.rightBarButtonItem!.title! = "Salvar"
+            
+            nomeDoAutor.isUserInteractionEnabled = true
+            nomeDoLivro.isUserInteractionEnabled = true
+            numeroDePaginas.isUserInteractionEnabled = true
+            ISBN.isUserInteractionEnabled = true
+            
+            print("clicou no botão")
+            
+            let selectedBackgroundColor = UIColor.init(red: 66/255, green: 66/255, blue: 79/255, alpha: 0.3)
+            
+            nomeDoAutor.backgroundColor = selectedBackgroundColor
+            nomeDoLivro.backgroundColor = selectedBackgroundColor
+            numeroDePaginas.backgroundColor = selectedBackgroundColor
+            ISBN.backgroundColor = selectedBackgroundColor
+            clicou = false
+           
+            
+        } else {
+            print("aqui não pode editar")
+            self.navigationItem.rightBarButtonItem!.title! = "Editar"
+            
+            nomeDoAutor.isUserInteractionEnabled = false
+            nomeDoLivro.isUserInteractionEnabled = false
+            numeroDePaginas.isUserInteractionEnabled = false
+            ISBN.isUserInteractionEnabled = false
+            let selectedBackgroundColor = UIColor.init(red: 66/255, green: 66/255, blue: 79/255, alpha: 0)
+            
+            nomeDoAutor.backgroundColor = selectedBackgroundColor
+            nomeDoLivro.backgroundColor = selectedBackgroundColor
+            numeroDePaginas.backgroundColor = selectedBackgroundColor
+            ISBN.backgroundColor = selectedBackgroundColor
+            clicou = true
+        }
+        
     }
     
     @IBAction func terminouDeEscolher(_ sender: Any) {

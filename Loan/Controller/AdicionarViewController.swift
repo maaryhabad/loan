@@ -33,7 +33,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
 //        todasAsCategorias = Model.instance.livros.map{$0.categoria}
 //        // Do any additional setup after loading the view.
 //
@@ -71,6 +71,7 @@ class AdicionarViewController: UIViewController, UINavigationControllerDelegate 
         viewController.codeDelegate = self
         viewController.dismissalDelegate = self
         viewController.errorDelegate = self
+        
         viewController.headerViewController.titleLabel.text = "Escaneie o código de barras"
         viewController.headerViewController.closeButton.tintColor = .red
         
