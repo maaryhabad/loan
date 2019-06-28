@@ -14,7 +14,6 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     
     @IBOutlet weak var ultimosView: UIView!
-    @IBOutlet weak var btnAdicionar: UIButton!
     
     
     override func viewDidLoad() {
@@ -33,8 +32,6 @@ class dashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             self.ultimosView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 6, blur: 10, spread: 2)
             self.atualizaTresLivros()
             self.collection.reloadData()
-            //self.btnAdicionar.layer.cornerRadius = 10
-            self.btnAdicionar.isHidden = true
         }
         
         navigationItem.hidesBackButton = true;

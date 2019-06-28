@@ -27,7 +27,6 @@
 		CD9F0BF222A9E446003A2C2D /* UltimosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */; };
 		CD9F0BF422A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F0BF322A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift */; };
 		CD9FF02122A9589E003BBF00 /* ColecaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF02022A9589E003BBF00 /* ColecaoViewController.swift */; };
-		CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */; };
 		CDA8C79922B3C42A00309E09 /* DAOGoogleBooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8C79822B3C42A00309E09 /* DAOGoogleBooksAPI.swift */; };
 		CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA2F1A22925970009B3F3A /* LivroViewController.swift */; };
 		CDBD75FB228EF3F70008BF2C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */; };
@@ -85,7 +84,6 @@
 		CD9F0BF122A9E446003A2C2D /* UltimosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltimosCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD9F0BF322A9E5E3003A2C2D /* ColecoesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColecoesCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD9FF02022A9589E003BBF00 /* ColecaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColecaoViewController.swift; sourceTree = "<group>"; };
-		CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
 		CDA8C79822B3C42A00309E09 /* DAOGoogleBooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOGoogleBooksAPI.swift; sourceTree = "<group>"; };
 		CDAA2F1A22925970009B3F3A /* LivroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroViewController.swift; sourceTree = "<group>"; };
 		CDBD75FA228EF3F70008BF2C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 		CD86C00422A94BB600B65AC0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CDA03A84228AF9E200FB1DF0 /* AdicionarViewController.swift */,
 				CDAA2F1A22925970009B3F3A /* LivroViewController.swift */,
 				CD2603A42298709400D07513 /* dashboardViewController.swift */,
 				CD53CF0E22A7EAF7002D7611 /* TodosViewController.swift */,
@@ -492,7 +489,6 @@
 				CDAA2F1B22925970009B3F3A /* LivroViewController.swift in Sources */,
 				CD7D2ABD228EDDFB00CB76E9 /* Model.swift in Sources */,
 				CDD28C5422C2438D00AC40E4 /* UIViewController+Extensions.swift in Sources */,
-				CDA03A85228AF9E200FB1DF0 /* AdicionarViewController.swift in Sources */,
 				CD7D2ABC228EDDFB00CB76E9 /* Livro.swift in Sources */,
 				CDF5B5FF22C0FC3A00C1E4ED /* SignInViewController.swift in Sources */,
 				CD5303C822B2957F00BB0FDF /* BarCode+Extensions.swift in Sources */,
